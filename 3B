@@ -1,0 +1,101 @@
+interface PowerManageable 
+{
+    void powerOn();
+    void powerOff();
+    boolean isPoweredOn();
+}
+
+class ElectronicDevice implements PowerManageable 
+  {
+    private boolean poweredOn;
+     public ElectronicDevice() {
+        poweredOn = false;
+    }
+
+    public void powerOn() {
+        poweredOn = true;
+        System.out.println("Device powered on.");
+    }
+
+    public void powerOff() {
+        poweredOn = false;
+        System.out.println("Device powered off.");
+    }
+
+    public boolean isPoweredOn() {
+        return poweredOn;
+    }
+}
+
+class Smartphone extends ElectronicDevice {
+    private String brand;
+
+    public Smartphone(String brand) {
+        this.brand = brand;
+    }
+
+    public void makeCall(String contact) {
+        if (isPoweredOn()) {
+            System.out.println(brand + " smartphone is making a call to " + contact);
+        } else {
+            System.out.println("Device is powered off. Cannot make a call.");
+        }
+    }
+}
+
+class Laptop extends ElectronicDevice {
+    private String brand;
+    public Laptop(String brand) {
+        this.brand = brand;
+    }
+
+    public void openApplication(String appName) {
+        if (isPoweredOn()) {
+            System.out.println(brand + " laptop is opening the " + appName + " application.");
+        } else {
+            System.out.println("Device is powered off. Cannot open applications.");
+        }
+    }
+}
+
+class Tablet extends ElectronicDevice {
+    private String brand;
+
+    public Tablet(String brand) {
+        this.brand = brand;
+    }
+
+    public void browseWeb(String website) {
+        if (isPoweredOn()) {
+            System.out.println(brand + " tablet is browsing the web on " + website);
+        } else {
+            System.out.println("Device is powered off. Cannot browse the web.");
+        }
+    }
+}
+
+public class ElectronicDeviceDemo {
+    public static void main(String[] args) {
+        Smartphone samsungPhone = new Smartphone("Samsung");
+        Laptop dellLaptop = new Laptop("Dell");
+        Tablet appleTablet = new Tablet("Apple");
+
+        samsungPhone.powerOn();
+        samsungPhone.makeCall("John");
+
+        dellLaptop.powerOn();
+        dellLaptop.openApplication("Word");
+
+        appleTablet.powerOn();
+        appleTablet.browseWeb("example.com");
+
+        samsungPhone.powerOff();
+        samsungPhone.makeCall("Alice");
+
+        dellLaptop.powerOff();
+        dellLaptop.openApplication("Excel");
+
+        appleTablet.powerOff();
+        appleTablet.browseWeb("google.com");
+    }
+}
