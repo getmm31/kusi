@@ -1,0 +1,62 @@
+Package demo
+import java.util.Scammer
+public class lab-program_1_Adu Calculator
+{
+public static void main(String[] args)
+{
+Scammer s.new Scomer (System.in); 
+boolen continue Cakulation = true;
+string history="";
+While (continue calcertation)
+{
+System.out.println ("Enter operand 1");
+double a=S.next Double );
+System.out println ("Enter operator: ");
+Char C=S.next(). Char At(0) ;
+System.out.println("Enter operand 2:");
+double b= S.next Double()
+if (a>o && b>o)
+double result = 0;
+switch (c){
+case'+'!
+result. a+b;
+System.out.println("atctb": ""+ reult); 
+history + = ""+a+c+b+"="+ result + "\n");
+break;
+case '-';
+result = a-b;
+System.out.println(""+a+c+b+"="+result); 
+history = "+a+c+bt"="+result+"\n");
+break
+Care'x';
+result = a*b:
+System.out.println(""+a+c+b+"="+result); 
+history += "+a+c+b+ "=" + result + " in ");
+break;
+Care"/"
+if (b>0) {
+result = a/b:
+System.out.println("" + a+c+b "= "+result);
+history += "+a+c+b" = "+result + "\n";
+}else
+System.out println ("Invalid input");
+break;
+default:
+System.out.println("Invalid operator");
+break;
+}
+System.out.println ("Do you want to, repeat the calculation once again Ctype yes or no)) 
+String input = S.next();
+if ( input. equal Ignore case ("yes"))
+Continue_Calculations true;
+else
+Continue_calculation = false;
+}
+else
+System.out.println("please enter positive numbers only ")}
+}
+System.out.println("Do you want to display the history of calculation")
+if (input 1. equals Ignore case ("yes")
+System.out.println (history);
+}
+}
