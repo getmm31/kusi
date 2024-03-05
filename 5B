@@ -1,0 +1,25 @@
+public class String Handling Lab { 
+public static void main(String[] args) { 
+String constructorString1 = new String("Hello, ");
+String constructorString2 = new String("world!");
+String literalString1 = "Hello, "; 
+String literalString2 = "world!";
+String result = constructorString1 + constructorString2;
+char charAtIndex = result.charAt(7);
+boolean areEqual = constructorString1.equals(literalString1);
+System.out.println("Using constructors:");
+System.out.println(constructorString1);
+System.out.println(constructorString2);
+
+System.out.println("\nUsing literals:"); 
+System.out.println(literalString1); 
+System.out.println(literalString2);
+
+System.out.println("\nConcatenated String:"); 
+System.out.println(result);
+
+System.out.println("\nCharacter at index 7: " + charAtIndex);
+
+System.out.println("\nAre constructorString1 and literalString1 equal? " + areEqual);
+}
+}
