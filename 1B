@@ -1,0 +1,38 @@
+import java.util. Scanner;
+{
+public static void main(String[] args)
+{
+Scanner = new Scanner(System.in);
+Syrtem.out.printl ("Enter the number of terms(n)
+for the fibonacci Series :); 
+int n = Scanner.next Int();
+long first Term = 0;
+long second Term = 1;
+long even Sum=0;
+long odd Product=1;
+double. Sum =1;
+System.out.println ("Fibonacci Series: "First Term +" "+ Second Term.
+for (int i=2,i<n;i++)
+{
+long next Term=first term + Second Term;
+sum += next Term;
+System.out.print("" + next term); 
+if (next Term%2==0 )
+{
+even sum t = next Tum;
+}
+else
+{
+odd Product = next term;
+}
+first Term = Second Tum; 
+Second Term: next term;
+}
+double average = Sum/n;
+System.out.println ("\n Sung even terms: "= even Sum);
+System.out.println("Product of odd terms: "+ product);
+System.out.println("Average of the series : "+ average);
+Scanner. Close();
+}
+}
+}
