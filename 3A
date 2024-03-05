@@ -1,0 +1,81 @@
+class Vehicle
+{
+public void start()
+{
+System.out.println("Vehicle is starting");
+}
+public void stop()
+{
+System.out.println("Vehicle is stopping");
+}
+}
+class Car extends Vehicle
+{
+public void accelerate()
+{
+System.out.println("Car is accelerated");
+}
+public void start()
+{
+System.out.println("Car is starting");
+}
+public void stop()
+{
+System.out.println("Car is stopping");
+}
+}
+class Sportscar extends Car
+{
+public void addTurboboost()
+{
+System.out.println("Sports car is addTurboboost");
+}
+public void start()
+{
+System.out.println("Sportscar is starting");
+}
+public void stop()
+{
+System.out.println("Sportscar is stopping");
+}
+}
+class Truck extends Vehicle
+{
+public void loadCargo()
+{
+System.out.println("Truck is loading Cargo");
+}
+public void start()
+{
+System.out.println("Truck is starting");
+}
+public void stop()
+{
+System.out.println("Truck is stopping");
+}
+}
+public class Demo
+{
+public static void main(String[] args)
+{
+Vehicle V = new Vehicle();
+Car C = new Car();
+Sportscar SP = new Sportscar();
+Truck T= new Truck();
+
+V.start();
+V.stop();
+
+C.start();
+C.accelerate();
+C.stop();
+
+SP.start();
+SP.addTurboboost();
+SP.stop();
+
+T.start();
+T.loadCargo();
+T.stop();
+}
+}
